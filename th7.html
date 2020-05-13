@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị 20 số nguyên tố đầu tiên</title>
+</head>
+
+<body>
+    <script>
+        let numbers= parseInt(prompt("Nhập một số "));
+        let count = 0;
+        let N = 2;
+         function lasonguyento(so){
+            for(let i=2;i<so;i++){
+                if (so%i==0){
+                    return false;
+                }
+                
+            }
+            return true;
+        }
+        for(count=0;count<numbers;) {
+            if(lasonguyento(N)){
+                document.write(N+'<br>');
+                count++;
+            }
+            N++;
+        }
+       
+    </script>
+</body>
+
+</html>
