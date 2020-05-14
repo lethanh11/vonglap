@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tổng 30 số chia hết cho 7</title>
+</head>
+<body>
+    <script>
+        let count = 0; sum=0;
+        for(let i=1;;i++)
+        {
+          if(i%7===0)
+          {
+             count+=1;
+             sum+=i;
+             document.write(i + ' ' );
+          }
+          if(count==30) break;
+        } document.write('<br>'+sum);
+        
+    </script>
+</body>
+</html>

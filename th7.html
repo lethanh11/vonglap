@@ -9,26 +9,24 @@
 
 <body>
     <script>
-        let numbers= parseInt(prompt("Nhập một số "));
+        let numbers = parseInt(prompt("Nhập một số "));
         let count = 0;
         let N = 2;
-         function lasonguyento(so){
-            for(let i=2;i<so;i++){
-                if (so%i==0){
+        function lasonguyento(so) {
+            for (let i = 2; i < so; i++) {
+                if (so % i == 0) {
                     return false;
                 }
-                
             }
             return true;
         }
-        for(count=0;count<numbers;) {
-            if(lasonguyento(N)){
-                document.write(N+'<br>');
+        for (count = 0; count < numbers;) {
+            if (lasonguyento(N)) {
+                document.write(N + '<br>');
                 count++;
             }
             N++;
         }
-       
     </script>
 </body>
 
