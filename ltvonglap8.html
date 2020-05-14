@@ -4,46 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game đoán chữ</title>
+    <title>Game đoán số</title>
 </head>
 
 <body>
-    <h2> Game đoán số trong khoảng tử 1-100</h2>
+    <h2>Game Đoán Số Trúng Thưởng</h2>
     <div>
-        Nhập khoảng từ <input type="text" id="a"> tới <input type="text" id="b"><br>
-        <button onclick="play()"> Chơi </button>
+        <button onclick="start()">Chơi</button>
     </div>
     <script>
-        function play() {
-            let a = parseInt(document.getElementById('a').value);
-            let b = parseInt(document.getElementById('b').value);
+        function start() {
+            let a = +prompt('Nhập vào một số thứ nhất trong khoảng bạn muốn đoán ');
+            let b = +prompt('Tới số thứ 2 trong khoảng bạn muốn đoán');
             let dem = 0;
-            while ((dem < a) || (dem > b)) {
+            while ((dem < a || dem > b)) {
                 dem = Math.round(Math.random() * 101);
             }
-            let input = parseInt(prompt('Nhập số bạn muốn đoán'));
+            let input = +prompt('Nhập số bạn muốn đoán trong khoảng bạn vừa cho');
             let count = 0;
             while (true) {
-
                 if (input < dem) {
-                    alert("Nhỏ rầu! Tăng thêm đi man!!!");
+                    alert('Nhỏ quá đấy ');
                 }
                 if (input > dem) {
-                    alert("To rứa! Bớt bớt đi man!!!");
+                    alert('To Quá trời');
                 }
                 if (input === dem) {
-                    alert("Quéo Quòe Qoeu!!! Bingo! Số đoán là " + dem);
+                    alert('Bingo!Con số may mắn hôm nay của bạn là :' + dem);
                     break;
                 }
                 if (count === 2) {
-                    alert("Quéo Quòe Qoeu!!!Thua rầu man!!! Số đúng là" + dem);
+                    alert('Quá 3 lượt mất rồi');
                     break;
                 }
-                input = parseInt(prompt('Nhập số bạn muốn đoán lại'));
-                count += 1;
+                input=+prompt('Nhập vào một số bạn muốn đoán lại');
+                count +=1;
             }
         }
-
     </script>
 </body>
 
